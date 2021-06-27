@@ -1,0 +1,54 @@
+C:\Users\pratap\output>curl -vk https://172.0.3.103:8088
+* Rebuilt URL to: https://172.0.3.103:8088/
+*   Trying 172.0.3.103...
+* TCP_NODELAY set
+* Connected to 172.0.3.103 (172.0.3.103) port 8088 (#0)
+* schannel: SSL/TLS connection with 172.0.3.103 port 8088 (step 1/3)
+* schannel: disabled server certificate revocation checks
+* schannel: verifyhost setting prevents Schannel from comparing the supplied target name with the subject names in server certificates.
+* schannel: using IP address, SNI is not supported by OS.
+* schannel: sending initial handshake data: sending 147 bytes...
+* schannel: sent initial handshake data: sent 147 bytes
+* schannel: SSL/TLS connection with 172.0.3.103 port 8088 (step 2/3)
+* schannel: failed to receive handshake, need more data
+* schannel: SSL/TLS connection with 172.0.3.103 port 8088 (step 2/3)
+* schannel: encrypted data got 2127
+* schannel: encrypted data buffer: offset 2127 length 4096
+* schannel: sending next handshake data: sending 93 bytes...
+* schannel: SSL/TLS connection with 172.0.3.103 port 8088 (step 2/3)
+* schannel: encrypted data got 258
+* schannel: encrypted data buffer: offset 258 length 4096
+* schannel: SSL/TLS handshake complete
+* schannel: SSL/TLS connection with 172.0.3.103 port 8088 (step 3/3)
+* schannel: stored credential handle in session cache
+> GET / HTTP/1.1
+> Host: 172.0.3.103:8088
+> User-Agent: curl/7.55.1
+> Accept: */*
+>
+* schannel: client wants to read 102400 bytes
+* schannel: encdata_buffer resized 103424
+* schannel: encrypted data buffer: offset 0 length 103424
+* schannel: encrypted data got 370
+* schannel: encrypted data buffer: offset 370 length 103424
+* schannel: decrypted data length: 341
+* schannel: decrypted data added: 341
+* schannel: decrypted data cached: offset 341 length 102400
+* schannel: encrypted data buffer: offset 0 length 103424
+* schannel: decrypted data buffer: offset 341 length 102400
+* schannel: schannel_recv cleanup
+* schannel: decrypted data returned 341
+* schannel: decrypted data buffer: offset 0 length 102400
+< HTTP/1.1 302 Found
+< location: /login?next=%2F
+< kbn-name: bbinstant-staging-jenkins-Host1
+< kbn-license-sig: b27d9473bb89f47a18cf4b27041edf0ff29e5d06a8df710d881a47541b58c897
+< cache-control: private, no-cache, no-store, must-revalidate
+< content-length: 0
+< Date: Tue, 27 Apr 2021 00:52:20 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=120
+<
+* Connection #0 to host 172.0.3.103 left intact
+
+C:\Users\pratap\output>
